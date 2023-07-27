@@ -22,7 +22,7 @@ if [ "${CF_PAGES:-""}" = "1" ]; then
 
   # Install mdbook
   MDBOOK_URL="https://github.com/rust-lang/mdBook/releases/download/v${MDBOOK_VERSION}/mdbook-v${MDBOOK_VERSION}-$(uname -m)-unknown-linux-gnu.tar.gz"
-  curl --proto '=https' --tlsv1.2 -sSfL "${MDBOOK_URL}" | tar -C /usr/local/bin -xzv
+  curl --proto '=https' --tlsv1.2 -sSfL "${MDBOOK_URL}" | tar -C "$HOME/.cargo/bin" -xzv
 fi
 
 # Sanity check
